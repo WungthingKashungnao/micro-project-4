@@ -17,9 +17,15 @@ function calculate(button) {
 
     screenResult.textContent = eval(screenOutput);
   } else {
-    calculation.push(value);
-    screenOutput = calculation.join("");
-    screenResult.textContent = screenOutput;
+    if (value === "x") {
+      calculation.push("*");
+      screenOutput = calculation.join("");
+      screenResult.textContent = screenOutput;
+    } else {
+      calculation.push(value);
+      screenOutput = calculation.join("");
+      screenResult.textContent = screenOutput;
+    }
   }
 }
 
