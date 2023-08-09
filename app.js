@@ -17,6 +17,7 @@ function calculate(button) {
 
     screenResult.textContent = eval(screenOutput);
   } else {
+    // on the html button with value x, it is not recognised for multiplication with eval so update value to * for button x and push it in the array
     if (value === "x") {
       calculation.push("*");
       screenOutput = calculation.join("");
